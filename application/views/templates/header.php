@@ -10,7 +10,6 @@
     <link rel="icon" type="image/png" href="<?php echo base_url().'assets/images/fav.png';?>">
     <!-- css files -->
     <link rel="stylesheet" href= <?php echo base_url()."assets/css/bootstrap.min.css";?> />
-    <link rel="stylesheet" type="text/css" href= <?php echo base_url()."assets/css/styles.css";?> />
     <link rel="stylesheet" type="text/css" href= <?php echo base_url()."assets/css/font-awesome.min.css";?> />
     <?php
     if(is_array($css_link) && count($css_link)!=0) {
@@ -38,13 +37,13 @@
         <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
             <ul class="nav navbar-nav navbar-right">
                 <li>
-                    <a href="#">ADMIN</a>
+                    <a href="#signup" data-toggle="modal" data-target=".bs-modal-sm">ADMIN</a>
                 </li>
                 <li>
-                    <a href="#">ABOUT US</a>
+                    <a href="#" data-toggle="modal" data-target=".about">ABOUT US</a>
                 </li>
                 <li>
-                    <a href="#">CONTACT</a>
+                    <a href="#" data-toggle="modal" data-target=".contact">CONTACT</a>
                 </li>
             </ul>
         </div>

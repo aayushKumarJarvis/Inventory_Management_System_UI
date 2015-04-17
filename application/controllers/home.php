@@ -11,6 +11,7 @@ class Home extends CI_Controller {
 
         $this->header_data['title'] = "Inventory Management System";
         $this->header_data['css_link'] = array("home.css");
+        $this->footer_data['js'] = "";
         $this->footer_data['js_link'][] = "";
     }
 
