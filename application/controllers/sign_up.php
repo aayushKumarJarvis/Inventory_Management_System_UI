@@ -11,7 +11,7 @@ class Sign_Up extends CI_Controller {
         parent::__construct();
 
         $this->header_data['title'] = "Sign Up - Inventory Management System";
-        $this->header_data['css_link'] = "";
+        $this->header_data['css_link'] = array("sign_up.css");
         $this->footer_data['js'] = "";
         $this->footer_data['js_link'][] = "";
 
@@ -28,6 +28,5 @@ class Sign_Up extends CI_Controller {
         $this->load->view($view, $this->body_data);
         $this->load->view('/templates/footer',$this->footer_data);
     }
-
 
 }
