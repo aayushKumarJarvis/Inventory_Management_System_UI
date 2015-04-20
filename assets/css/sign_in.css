@@ -1,0 +1,44 @@
+body,
+html {
+    width: 100%;
+    height: 100%;
+}
+
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: "Lato","Helvetica Neue",Helvetica,Arial,sans-serif;
+    font-weight: 700;
+}
+
+.panel-heading {
+    padding: 5px 15px;
+}
+
+.panel-footer {
+    padding: 1px 15px;
+    color: #A0A0A0;
+}
+
+.profile-img {
+    width: 96px;
+    height: 96px;
+    margin: 0 auto 10px;
+    display: block;
+    -moz-border-radius: 50%;
+    -webkit-border-radius: 50%;
+    border-radius: 50%;
+}
+
+.intro-header {
+    padding-top: 50px; /* If you're making other pages, make sure there is 50px of padding to make sure the navbar doesn't overlap content! */
+    padding-bottom: 161px;
+    text-align: center;
+    color: #f8f8f8;
+    background: url(../images/intro-bg.jpg) no-repeat center center;
+    background-size: cover;
+}
