@@ -37,7 +37,7 @@
         <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
             <ul class="nav navbar-nav navbar-right">
                 <li>
-                    <a href="#" data-toggle="modal" data-target=".bs-modal-sm">ADMIN</a>
+                    <a href="#" data-toggle="modal" data-target=".bs-modal-sm">SIGN IN</a>
                 </li>
                 <li>
                     <a href="#" data-toggle="modal" data-target=".about">ABOUT US</a>
@@ -69,34 +69,33 @@
                         <p></p> Please contact <a href="mailto:iaayush.stevejobs@gmail.com">aayush.y12@lnmiit.ac.in</a> for any other inquiries.</p>
                     </div>
                     <div class="tab-pane fade active in" id="signin">
-                        <form class="form-horizontal">
-                            <fieldset>
-                                <!-- Sign In Form -->
-                                <!-- Text input-->
-                                <div class="control-group">
-                                    <label class="control-label" for="userid">Username:</label>
-                                    <div class="controls">
-                                        <input required="" id="userid" name="userid" type="text" class="form-control" placeholder="JoeSixpack" class="input-medium" required="">
+                        <form class="form-horizontal" action="user/login" method="post">
+                                <fieldset>
+                                    <!-- Sign In Form -->
+                                    <!-- Text input-->
+                                    <div class="control-group">
+                                        <label class="control-label" for="username">Username:</label>
+                                        <div class="controls">
+                                            <input id="username" name="username" type="text" class="form-control" placeholder="JoeSixpack" class="input-medium" required="" value="">
+                                        </div>
                                     </div>
-                                </div>
 
-                                <!-- Password input-->
-                                <div class="control-group">
-                                    <label class="control-label" for="passwordinput">Password:</label>
-                                    <div class="controls">
-                                        <input required="" id="passwordinput" name="passwordinput" class="form-control" type="password" placeholder="********" class="input-medium">
+                                    <!-- Password input-->
+                                    <div class="control-group">
+                                        <label class="control-label" for="password">Password:</label>
+                                        <div class="controls">
+                                            <input id="password" name="password" class="form-control" type="password" placeholder="********" class="input-medium">
+                                        </div>
                                     </div>
-                                </div>
 
-
-                                <!-- Button -->
-                                <div class="control-group">
-                                    <label class="control-label" for="signin"></label>
-                                    <div class="controls">
-                                        <button id="signin" name="signin" class="btn btn-success">Sign In</button>
+                                    <!-- Button -->
+                                    <div class="control-group">
+                                        <label class="control-label" for="signin"></label>
+                                        <div class="controls">
+                                            <button id="signin" name="signin" class="btn btn-success">Sign In</button>
+                                        </div>
                                     </div>
-                                </div>
-                            </fieldset>
+                                </fieldset>
                         </form>
                     </div>
                     <div class="tab-pane fade" id="signup">
