@@ -1,49 +1,30 @@
-<form class="form-horizontal" action='' method="POST">
-    <fieldset>
-        <div id="legend">
-            <legend class="">Register</legend>
-        </div>
-        <div class="control-group">
-            <!-- Username -->
-            <label class="control-label"  for="username">Username</label>
-            <div class="controls">
-                <input type="text" id="username" name="username" placeholder="" class="input-xlarge">
-                <p class="help-block">Username can contain any letters or numbers, without spaces</p>
-            </div>
-        </div>
+<div class="container">
+    <div class="row">
+        <div class="col-md-4 col-md-offset-4">
+            <div class="panel panel-default">
+                <div class="panel-body">
+                    <h5 class="text-center">
+                        SIGN UP</h5>
+                    <form class="form form-signup" role="form" method="post" action="<?php echo base_url();?>index.php/user/add_user">
+                        <div class="form-group">
+                            <div class="input-group">
+                                <span class="input-group-addon"><span class="glyphicon glyphicon-user"></span></span>
+                                <input id="username" name="username" type="text" class="form-control" placeholder="Username" />
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <div class="input-group">
+                                <span class="input-group-addon"><span class="glyphicon glyphicon-lock"></span></span>
+                                <input type="password" id="password" name="password" class="form-control" placeholder="Password" />
+                            </div>
+                        </div>
+                        <button value=" Send" type="submit" id="submit" class="btn btn-sm btn-primary btn-block" role="button">
 
-        <div class="control-group">
-            <!-- E-mail -->
-            <label class="control-label" for="email">E-mail</label>
-            <div class="controls">
-                <input type="text" id="email" name="email" placeholder="" class="input-xlarge">
-                <p class="help-block">Please provide your E-mail</p>
+                            SUBMIT</button>
+                    </form>
+                </div>
             </div>
         </div>
-
-        <div class="control-group">
-            <!-- Password-->
-            <label class="control-label" for="password">Password</label>
-            <div class="controls">
-                <input type="password" id="password" name="password" placeholder="" class="input-xlarge">
-                <p class="help-block">Password should be at least 4 characters</p>
-            </div>
-        </div>
-
-        <div class="control-group">
-            <!-- Password -->
-            <label class="control-label"  for="password_confirm">Password (Confirm)</label>
-            <div class="controls">
-                <input type="password" id="password_confirm" name="password_confirm" placeholder="" class="input-xlarge">
-                <p class="help-block">Please confirm password</p>
-            </div>
-        </div>
-
-        <div class="control-group">
-            <!-- Button -->
-            <div class="controls">
-                <button class="btn btn-success">Register</button>
-            </div>
-        </div>
-    </fieldset>
-</form>
+    </div>
+</div>
+</div> 

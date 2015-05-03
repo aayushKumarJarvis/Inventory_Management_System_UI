@@ -1,3 +1,5 @@
+
+
 <div class="intro-header">
     <div class="container">
 
@@ -9,7 +11,7 @@
                     <hr class="intro-divider">
                     <ul class="list-inline intro-social-buttons">
                         <li>
-                            <a href="<?php echo base_url().'index.php/registration'?>" class="btn btn-default btn-lg"><i class="fa fa-user"></i> <span class="network-name" data-toggle="modal" data-target=".signupuser">REGISTER YOURSELF</span></a>
+                            <a href="user/registration" class="btn btn-default btn-lg"><i class="fa fa-user"></i> <span class="network-name" data-toggle="modal" data-target=".signupuser">REGISTER YOURSELF</span></a>
                         </li>
                         <li>
                             <a href="#" class="btn btn-default btn-lg"><i class="fa fa-comment"></i> <span class="network-name" data-toggle="modal" data-target=".complainuser">COMPLAINT</span></a>

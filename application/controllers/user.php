@@ -11,7 +11,7 @@ class User extends CI_Controller {
         parent::__construct();
 
         $this->header_data['title'] = "Sign Up - Inventory Management System";
-        $this->header_data['css_link'] = array("");
+        $this->header_data['css_link'] = array("signup.css");
         $this->footer_data['js'] = "";
         $this->footer_data['js_link'][] = "";
 
@@ -23,13 +23,57 @@ class User extends CI_Controller {
         $username = $this->input->post('username');
         $password = $this->input->post('password');
 
+        $sessionData = array(
+          'username' => $username
+        );
+
+        $this->session->set_userdata($sessionData);
+
         $result = $this->model_user->login($username,$password);
 
-        if($result)
+        if($result) {
+            $this->body_data['username'] = $this->session->userdata('username');
             $this->load_view('profile');
-        else
-            $this->load_view('wrong_details');
+        }
+        else {
+            $this->body_data['message'] = "Either Username or Password is INCORRECT ! Please try again";
+            $this->body_data['role'] = "danger";
+            $this->load_view('details');
+        }
     }
+
+    public function registration() {
+
+        $this->load_view('registration');
+    }
+
+    public function add_user() {
+
+        $username = $this->input->post('username');
+        $password = $this->input->password('password');
+
+        $result = $this->model_user->addUser($username, $password);
+
+        if($result == 0) {
+            $this->body_data['message'] = "User Already Exists ! Please choose a different username";
+            $this->body_data['role'] = 'info';
+            $this->load_view('details');
+        }
+        else if($result == 1) {
+
+            $this->body_data['message'] = "Congrats ! User is Registered";
+            $this->body->data['role'] = 'success';
+            $this->load_view('details');
+        }
+        else {
+
+            $this->body_data['message'] = "There is some server error. Please try again";
+            $this->body_data['role'] = "warning";
+            $this->load_view('details');
+        }
+    }
+
+    public function 
 
     public function load_view($view) {
 

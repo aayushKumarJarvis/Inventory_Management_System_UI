@@ -10,7 +10,7 @@ class Model_User extends CI_Model {
 
     function login($username, $password) {
 
-        $users = curl_init("http://localhost:8080/ims/users/listUsers/"); // URL to get all the list of Users in the database
+        $users = curl_init("http://localhost:8081/ims/users/listUsers/"); // URL to get all the list of Users in the database
 
         curl_setopt($users, CURLOPT_CUSTOMREQUEST,"GET");
         curl_setopt($users, CURLOPT_USERAGENT, $_SERVER['HTTP_USER_AGENT']);
@@ -35,9 +35,6 @@ class Model_User extends CI_Model {
 
     public function addUser($username, $password) {
 
-        if($this->checkForExistingUsers($username))
-            return 0;
-        else {
             $arrayForJSONObject = array (
 
                 "username" => $username,
@@ -61,11 +58,11 @@ class Model_User extends CI_Model {
             $resultCode = curl_getinfo($curlSession, CURLINFO_HTTP_CODE);
 
             if($resultCode == '200')
-                return 1;
+                return $json_string;
             else
-                return 2;
+                return $json_string;
         }
-    }
+
 
     public function checkForExistingUsers($username) {
 

@@ -69,14 +69,14 @@
                         <p></p> Please contact <a href="mailto:iaayush.stevejobs@gmail.com">aayush.y12@lnmiit.ac.in</a> for any other inquiries.</p>
                     </div>
                     <div class="tab-pane fade active in" id="signin">
-                        <form class="form-horizontal" action="user/login" method="post">
+                        <form class="form-horizontal" action="<?php echo base_url().'index.php/user/login'?>" method="post">
                                 <fieldset>
                                     <!-- Sign In Form -->
                                     <!-- Text input-->
                                     <div class="control-group">
                                         <label class="control-label" for="username">Username:</label>
                                         <div class="controls">
-                                            <input id="username" name="username" type="text" class="form-control" placeholder="JoeSixpack" class="input-medium" required="" value="">
+                                            <input id="username" name="username" type="text" class="form-control" placeholder="Aayush Kumar" class="input-medium" required="" value="">
                                         </div>
                                     </div>
 
@@ -106,7 +106,7 @@
                                 <div class="control-group">
                                     <label class="control-label" for="Email">Email:</label>
                                     <div class="controls">
-                                        <input id="Email" name="Email" class="form-control" type="text" placeholder="JoeSixpack@sixpacksrus.com" class="input-large" required="">
+                                        <input id="Email" name="Email" class="form-control" type="text" placeholder="aayush21kumar@gmail.com" class="input-large" required="">
                                     </div>
                                 </div>
 
@@ -114,7 +114,7 @@
                                 <div class="control-group">
                                     <label class="control-label" for="userid">Alias:</label>
                                     <div class="controls">
-                                        <input id="userid" name="userid" class="form-control" type="text" placeholder="JoeSixpack" class="input-large" required="">
+                                        <input id="userid" name="userid" class="form-control" type="text" placeholder="AayushKumar" class="input-large" required="">
                                     </div>
                                 </div>
 
