@@ -5,7 +5,7 @@
     </div>
     <div class="col-md-2 sidebar">
         <ul class="nav nav-pills nav-stacked">
-            <li class="active"><a href="#">Available Inventory</a></li>
+            <li><a href="<?php echo base_url().'index.php/inventory/availableItems' ?>">Available Inventory</a></li>
             <li><a href="#">Link</a></li>
             <li><a href="#">Link</a></li>
             <li><a href="#">Link</a></li>
@@ -18,7 +18,7 @@
                 Data Window
             </div>
             <div class="panel-body">
-
+                Select one of the options on the left as per your requirements.
             </div>
         </div>
     </div>

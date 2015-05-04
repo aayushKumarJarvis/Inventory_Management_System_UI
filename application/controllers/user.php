@@ -73,8 +73,6 @@ class User extends CI_Controller {
         }
     }
 
-    public function 
-
     public function load_view($view) {
 
         $this->load->view('/templates/header',$this->header_data);
