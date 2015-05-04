@@ -10,12 +10,12 @@
                     <h3>Stationary Inventory Management System</h3>
                     <hr class="intro-divider">
                     <ul class="list-inline intro-social-buttons">
-                        <li>
+                        <!--<li>
                             <a href="user/registration" class="btn btn-default btn-lg"><i class="fa fa-user"></i> <span class="network-name" data-toggle="modal" data-target=".signupuser">REGISTER YOURSELF</span></a>
-                        </li>
-                        <li>
+                        </li>-->
+                        <!--<li>
                             <a href="#" class="btn btn-default btn-lg"><i class="fa fa-comment"></i> <span class="network-name" data-toggle="modal" data-target=".complainuser">COMPLAINT</span></a>
-                        </li>
+                        </li>--><br><br>
                     </ul>
                 </div>
             </div>

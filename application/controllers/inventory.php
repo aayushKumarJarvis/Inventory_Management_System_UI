@@ -36,6 +36,24 @@ class Inventory extends CI_Controller {
         $this->load_view('availableItems');
     }
 
+    public function getAllComplaints() {
+
+        $username = $this->input->post('username');
+
+        $sessionData = array(
+            'username' => $username
+        );
+
+        $this->session->set_userdata($sessionData);
+
+        $arrayOfComplaints = $this->model_inventory->getAllComplaints();
+
+        $this->header_data['title'] = "Complaint List";
+        $this->body_data['username'] = $username;
+        $this->body_data['complaints'] = $arrayOfComplaints;
+        $this->load_view('complaint');
+    }
+
     public function orderInventory() {
 
         $username = $this->input->post('username');

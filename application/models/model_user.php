@@ -10,7 +10,7 @@ class Model_User extends CI_Model {
 
     function login($username, $password) {
 
-        $users = curl_init("http://localhost:8081/ims/users/listUsers/"); // URL to get all the list of Users in the database
+        $users = curl_init("http://localhost:8081/ims/adminUsers/listAdminUsers/"); // URL to get all the list of Users in the database
 
         curl_setopt($users, CURLOPT_CUSTOMREQUEST,"GET");
         curl_setopt($users, CURLOPT_USERAGENT, $_SERVER['HTTP_USER_AGENT']);

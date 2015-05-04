@@ -5,11 +5,10 @@
     </div>
     <div class="col-md-2 sidebar">
         <ul class="nav nav-pills nav-stacked">
-            <li><a href="<?php echo base_url().'index.php/inventory/availableItems' ?>">Available Inventory</a></li>
-            <li><a href="<?php echo base_url().'index.php/inventory/orderInventory' ?>">Order Inventory</a></li>
-            <li><a href="<?php echo base_url().'index.php/inventory/myOrders' ?>">My Orders</a></li>
-            <li class="active"><a href="#">Make Complaint</a></li>
-            <li><a href="#">Link</a></li>
+            <li><a href="<?php echo base_url().'index.php/inventory/availableItems' ?>">Assigned Inventory</a></li>
+            <!--<li><a href="<?php /*echo base_url().'index.php/inventory/orderInventory' */?>">Order Inventory</a></li>-->
+            <li><a href="<?php echo base_url().'index.php/inventory/myOrders' ?>">Orders By Username</a></li>
+            <li class="active"><a href="<?php echo base_url().'index.php/inventory/getAllComplaints' ?>">View Complaints</a></li>
         </ul>
     </div>
     <div class="col-md-10 content">
@@ -19,17 +18,15 @@
             </div>
             <div class="panel-body">
                 <table class="table table-bordered table-hover table-responsive">
-                    <th>Username</th>
-                    <th>Item Name</th>
-                    <th>Item Quantity</th>
-                    <th>Item Remarks</th>
+                    <th>Name of Person</th>
+                    <th>Subject</th>
+                    <th>Complaint Description</th>
                     <tbody>
-                    <?php foreach($items as $key => $value): ?>
+                    <?php foreach($complaints as $key => $value): ?>
                         <tr>
-                            <td><?php echo $value->username; ?></td>
-                            <td><?php echo $value->itemDescription; ?></td>
-                            <td><?php echo $value->itemQuantity; ?></td>
-                            <td><?php echo $value->itemRemarks; ?></td>
+                            <td><?php echo $value->nameOfPerson; ?></td>
+                            <td><?php echo $value->subject; ?></td>
+                            <td><?php echo $value->complaintDescription; ?></td>
                         </tr>
                     <?php endforeach; ?>
                     </tbody>

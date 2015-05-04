@@ -37,7 +37,7 @@
         <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
             <ul class="nav navbar-nav navbar-right">
                 <li>
-                    <a href="#" data-toggle="modal" data-target=".bs-modal-sm">SIGN IN</a>
+                    <a href="#" data-toggle="modal" data-target=".bs-modal-sm">ADMIN SIGN IN</a>
                 </li>
                 <li>
                     <a href="#" data-toggle="modal" data-target=".about">ABOUT US</a>

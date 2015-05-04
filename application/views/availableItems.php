@@ -5,11 +5,10 @@
     </div>
     <div class="col-md-2 sidebar">
         <ul class="nav nav-pills nav-stacked">
-            <li class="active"><a href="<?php echo base_url().'index.php/inventory/availableItems' ?>">Available Inventory</a></li>
-            <li><a href="<?php echo base_url().'index.php/inventory/orderInventory' ?>">Order Inventory</a></li>
-            <li><a href="#">My Orders</a></li>
-            <li><a href="#">Link</a></li>
-            <li><a href="#">Link</a></li>
+            <li class="active"><a href="<?php echo base_url().'index.php/inventory/availableItems' ?>">Assigned Inventory</a></li>
+            <!--<li><a href="<?php /*echo base_url().'index.php/inventory/orderInventory' */?>">Order Inventory</a></li>-->
+            <li><a href="<?php echo base_url().'index.php/inventory/myOrders' ?>">Orders By Username</a></li>
+            <li><a href="<?php echo base_url().'index.php/inventory/getAllComplaints' ?>">View Complaints</a></li>
         </ul>
     </div>
     <div class="col-md-10 content">
