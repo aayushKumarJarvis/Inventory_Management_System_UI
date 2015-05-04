@@ -23,14 +23,15 @@ class Model_Inventory extends CI_Model {
         return $res_array;
     }
 
-    public function orderInventory($itemName, $itemQuantity, $itemDescription, $itemRemarks) {
+    public function orderInventory($username, $itemName, $itemQuantity, $itemRemarks) {
 
-        $arrayForJSONObject = array (
+        error_log($username."   ". $itemName."   ". $itemQuantity."  ". $itemRemarks);
+        $arrayForJSONObject = array(
 
-            "itemName" => $itemName,
-            "itemQuantity" => $itemQuantity,
-            "itemDescription" => $itemDescription,
-            "itemRemarks" => $itemRemarks
+            "username" => $username,
+            "item_description" => $itemName,
+            "item_quantity" => $itemQuantity,
+            "item_remarks" => $itemRemarks
         );
 
         $dataString = json_encode($arrayForJSONObject);
@@ -53,6 +54,5 @@ class Model_Inventory extends CI_Model {
             return true;
         else
             return false;
-
     }
 }

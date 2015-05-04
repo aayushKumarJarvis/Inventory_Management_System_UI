@@ -7,7 +7,7 @@
         <ul class="nav nav-pills nav-stacked">
             <li><a href="<?php echo base_url().'index.php/inventory/availableItems' ?>">Available Inventory</a></li>
             <li class="active"><a href="<?php echo base_url().'index.php/inventory/orderInventory' ?>">Order Inventory</a></li>
-            <li><a href="#">My Orders</a></li>
+            <li><a href="<?php echo base_url().'index.php/inventory/myOrders'?>">My Orders</a></li>
             <li><a href="#">Link</a></li>
             <li><a href="#">Link</a></li>
         </ul>
@@ -18,7 +18,8 @@
                 Data Window
             </div>
             <div class="panel-body">
-                <div class="container">
+                <?php echo form_open(base_url().'index.php/inventory/placeOrder'); ?>
+                    <div class="container">
                     <div class="row clearfix">
                         <div class="col-md-10 column">
                             <table class="table table-bordered table-hover" id="tab_logic">
@@ -28,16 +29,16 @@
                                         #
                                     </th>
                                     <th class="text-center">
-                                        Item
+                                        Username
                                     </th>
                                     <th class="text-center">
-                                        Quantity
+                                        Item Name
                                     </th>
                                     <th class="text-center">
-                                        Description
+                                        Item Quantity
                                     </th>
                                     <th class="text-center">
-                                        Previous Feedback (if any)
+                                        Item Remarks
                                     </th>
                                 </tr>
                                 </thead>
@@ -47,16 +48,16 @@
                                         1
                                     </td>
                                     <td>
-                                        <input type="text" name='item'  placeholder='Item' class="form-control"/>
+                                        <input type="text" name='username[]'  placeholder='Username' class="form-control"/>
                                     </td>
                                     <td>
-                                        <input type="text" name='quantity' placeholder='Quantity' class="form-control"/>
+                                        <input type="text" name='item_name[]' placeholder='Item Name' class="form-control"/>
                                     </td>
                                     <td>
-                                        <input type="text" name='description' placeholder='Description' class="form-control"/>
+                                        <input type="text" name='quantity[]' placeholder='Quantity' class="form-control"/>
                                     </td>
                                     <td>
-                                        <input type="text" name='remarks' placeholder='Remarks' class="form-control"/>
+                                        <input type="text" name='remarks[]' placeholder='Remarks' class="form-control"/>
                                     </td>
                                 </tr>
                                 <tr id='addr1'></tr>
@@ -66,7 +67,12 @@
                     </div>
                     <a id="add_row" class="btn btn-success pull-left">Add Item</a>
                     <a style="margin-left: 67%" id='delete_row' class="btn btn-danger">Delete Item</a>
+                        <br>
+                        <button style="margin-left: 32%" value="Send" type="submit" id="submit" class="btn btn-primary" role="button">
+
+                            PLACE ORDER</button>
                 </div>
+                <?php echo form_close(); ?>
             </div>
         </div>
     </div>
